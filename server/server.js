@@ -1,3 +1,6 @@
+
+console.log("starting libreboard yc");
+
 // account management : only email certified, and from the orange.com domain
 Accounts.config({
   restrictCreationByEmailDomain: function(email) {
@@ -32,9 +35,6 @@ Accounts.onCreateUser(function(options, user) {
 
 // (server-side)
 Meteor.startup(function() {
-
-  // Setup the production environment variables
-  process.env.ROOT_URL = 'http://yveschristol.me/';
 
   // Email settings for registration.
   Accounts.emailTemplates.from = 'yveschristol <noreply@yveschristol.me>';
